@@ -1,0 +1,14 @@
+environments:
+  "{{ .Environment.Name }}":
+    values:
+      - "{{ .Environment.Name }}-values.yaml"
+repositories:
+  - name: argo
+    url: https://argoproj.github.io/argo-helm
+releases:
+  - name: argocd
+    namespace: argocd
+    chart: argo/argo-cd
+    version: 3.33.5
+    values:
+      - values.yaml.gotmpl
