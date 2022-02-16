@@ -1,0 +1,9 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argocd-apps
+spec:
+  source:
+    path: apps/overlays/staging
+    repoURL: git@github.com:johnmanjiro13/argo-cd-helmfile-example.git
+    targetRevision: main
