@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nginx-apps
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: nginx
+  project: nginx
+  source:
+    path: nginx
+    repoURL: git@github.com:johnmanjiro13/argo-cd-helmfile-example.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
