@@ -10,7 +10,7 @@ spec:
   source:
     path: nginx
     repoURL: git@github.com:johnmanjiro13/argo-cd-helmfile-example.git
-    targetRevision: HEAD
+    targetRevision: develop
   syncPolicy:
     automated:
       selfHeal: true
