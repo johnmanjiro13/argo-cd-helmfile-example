@@ -1,0 +1,6 @@
+bases:
+  - ../../base
+
+patches:
+  - nginx.yaml
+  - argocd-apps.yaml
