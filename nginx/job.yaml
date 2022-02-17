@@ -15,7 +15,7 @@ spec:
       - command:
         - sh
         - -c
-        - echo hoge
+        - "sleep 10 && echo hoge"
         image: busybox
         name: echo
         resources: {}
